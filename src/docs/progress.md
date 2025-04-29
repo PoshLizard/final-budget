@@ -2,13 +2,13 @@ Replace the empty whitespace with an `X` (e.g., `- [X]`, but do not include the 
 If you are doing your own project replace with yuor own requirements/extensions. 
 
 # Habit Tracker
-- [ ] NAME
-- [ ] LIST
-- [ ] ADD
+- [X] NAME
+- [X] LIST
+- [X] ADD
 - [ ] BUDGET
 - [ ] EDIT
 - [ ] GRAPH
-- [ ] REMOVE
+- [X] REMOVE
 
 
 Possible extension requirements (optional):
