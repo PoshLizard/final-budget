@@ -4,7 +4,8 @@ import BudgetDash from './pages/BudgetDash'
 function App() {
   return (
     <div className="App">
-        <h1>tonyyin: tonyyin@udel.edu</h1>
+        <h1 style ={{fontSize : "3rem"}}>BUDGET APP</h1>
+        <p style={{marginTop: "-20px"}}>tonyyin: tonyyin@udel.edu</p>
       <BudgetDash/>
     </div>
   );

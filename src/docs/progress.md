@@ -5,7 +5,7 @@ If you are doing your own project replace with yuor own requirements/extensions.
 - [X] NAME
 - [X] LIST
 - [X] ADD
-- [ ] BUDGET
+- [X] BUDGET
 - [ ] EDIT
 - [ ] GRAPH
 - [X] REMOVE
