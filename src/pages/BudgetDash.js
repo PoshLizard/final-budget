@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
 const BudgetDash = () => {
   const [budget, setBudget] = useState(0);
-
   const [budgetRows, setBudgetRows] = useState([]);
   const [expenseName, setExpenseName] = useState("");
   const [expenseAmount, setExpenseAmount] = useState("");
@@ -24,6 +24,25 @@ const BudgetDash = () => {
   const removeExpense = (id) => {
     setBudgetRows((prev) => prev.filter((r) => r.id !== id));
   };
+
+  const COLORS = [
+    '#0088FE', 
+    '#00C49F', 
+    '#FFBB28', 
+    '#FF8042', 
+    '#A28DFF', 
+    '#FF6699', 
+    '#33CC33', 
+    '#FF4444', 
+    '#9966CC', 
+    '#FFCC00', 
+    '#00BFFF', 
+    '#FF9933',
+    '#66CCCC', 
+    '#CC6666', 
+    '#3399FF', 
+    '#999999', 
+  ];
 
   return (
     <div className="BudgetDash">
@@ -103,6 +122,25 @@ const BudgetDash = () => {
             Remaining Budget: 
             ${Math.max(budget - budgetRows.reduce((acc, row) => acc + row.amount, 0), 0).toFixed(2)}
           </h2>
+          <div>
+            <PieChart width={400} height={400}>
+              <Pie
+                data={budgetRows}
+                cx="50%"
+                cy="50%"
+                outerRadius={100}
+                dataKey="amount"
+                nameKey="name"
+                label={({ name }) => name}
+              >
+              {budgetRows.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+            </Pie>
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </div>
         </div>
       </div>
     </div>
