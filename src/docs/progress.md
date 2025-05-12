@@ -6,8 +6,8 @@ If you are doing your own project replace with yuor own requirements/extensions.
 - [X] LIST
 - [X] ADD
 - [X] BUDGET
-- [ ] EDIT
-- [ ] GRAPH
+- [X] EDIT
+- [X] GRAPH
 - [X] REMOVE
 
 
@@ -15,4 +15,4 @@ Possible extension requirements (optional):
 
 - [ ] TESTS
 - [ ] LOCALSTORAGE
-- [ ] STYLING
+- [X] STYLING
